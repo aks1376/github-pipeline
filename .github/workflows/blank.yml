@@ -4,7 +4,13 @@ jobs:
   explore-github-actions:
     name: some name 
     runs-on: ubuntu-latest
+    
     steps:
+      - name: Setup Nodejs 
+        uses: actions/setup-node@v4
+        with: 
+          node-version: latest
+      - run: node --version
       - run: echo "The job was automatically triggered by a ${{Github.event_name }} event."
       - run: echo " This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo " The name of your branch is ${{ GitHub.ref }} and your repository is ${{ GitHub.repository }}."
