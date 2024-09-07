@@ -11,6 +11,8 @@ jobs:
         with: 
           node-version: latest
       - run: node --version
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - run: pwd
       - run: ls
       - run: node app.js 
