@@ -17,6 +17,7 @@ jobs:
       - run: tree
       - run: npm i
       - run: npm run build
+      - run: tree
       - run: echo "The job was automatically triggered by a ${{Github.event_name }} event."
       - run: echo " This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo " The name of your branch is ${{ GitHub.ref }} and your repository is ${{ GitHub.repository }}."
